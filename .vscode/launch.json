@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DepApiApplication<dep_api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.dep_api.DepApiApplication",
+            "projectName": "dep_api",
+            "args": ""
+        }
+    ]
+}
