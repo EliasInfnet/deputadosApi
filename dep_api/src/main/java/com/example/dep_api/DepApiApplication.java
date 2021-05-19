@@ -19,7 +19,7 @@ public class DepApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println(deputadoService.buscarDeputados("10").dados.get(0).getNome());
+		System.out.println(deputadoService.buscarDeputados("10").dados.get(1).getNome());
 
 	}
 }

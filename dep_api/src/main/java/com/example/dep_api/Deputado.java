@@ -11,7 +11,6 @@ public class Deputado {
     private String nome;
 
     public Deputado() {
-
     }
 
     @JsonProperty("nome")

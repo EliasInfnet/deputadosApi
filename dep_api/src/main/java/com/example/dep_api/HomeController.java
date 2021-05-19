@@ -15,6 +15,7 @@ public class HomeController {
     @RequestMapping("/")
     public String home() {
         deputadoService.buscarDeputados("10");
+        System.out.println("Go -- Home");
         return "index";
     }
 
