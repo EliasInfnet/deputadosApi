@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+  background-color: rgb(36, 36, 36);
+}
+
+#container {
+  display: block;
+  text-align: center;
+}
+
+#mainback {
+  width: 100vw;
+}
+
+#maintext {
+  margin-top: -250px;
+  color: aliceblue;
+  font-size: 60px;
+}
+
+#divDeputados {
+  margin-top: 150px;
+  text-align: center;
+  align-items: center;
+}
+
+#navBusca {
+  width: 650px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+#listaDeputados {
+  margin: 0 300px 0 300px;
+  justify-content: space-around;
+  color: rgb(49, 49, 49);
+}
+
+.card {
+  max-width: 200px;
+}
