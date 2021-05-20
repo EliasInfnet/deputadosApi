@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
-prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%> 
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -42,32 +44,30 @@ prefix="c"%>
         <nav class="navbar navbar-light bg-light" id="navBusca">
           <div class="container-fluid">
             <a class="navbar-brand">Entre com o nome do deputado</a>
-            <form class="d-flex">
-              <input
+            <form:form class="d-flex" action="?" method="post" modelAttribute="pv">              
+              <form:input
                 class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+                path="palavra"
+                placeholder="Buscar"
               />
-              <button class="btn btn-outline-success">Buscar</button>
-            </form>
+              <form:button class="btn btn-outline-success">Buscar</form:button>
+            </form:form>
           </div>
         </nav>
-        <hr/>
+        <hr/>     
         <div id="listaDeputados" class="row row-cols-4">
           <c:forEach items="${lista}" var="dep">
-            <div class="card">
-                <img src="${dep.getUrlFoto()}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${dep.getNome()}</h5>
-                  <p class="card-text">Partido : ${dep.getSiglaPartido()}</p>                  
-                  <p class="card-text">Estado : ${dep.getSiglaUf()}</p>                  
-                  <p class="card-text">Email : ${dep.getEmail()}</p>
-                </div>
-              </div>
-          </c:forEach>
+                <div class="card">
+                    <img src="${dep.getUrlFoto()}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${dep.getNome()}</h5>
+                      <p class="card-text">Partido : ${dep.getSiglaPartido()}</p>                  
+                      <p class="card-text">Estado : ${dep.getSiglaUf()}</p>                  
+                      <p class="card-text">Email : ${dep.getEmail()}</p>
+                    </div>
+                  </div>
+              </c:forEach>
         </div>
-      </div>
     </div>
   </body>
 </html>

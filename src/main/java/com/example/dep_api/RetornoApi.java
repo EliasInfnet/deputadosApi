@@ -7,5 +7,4 @@ public class RetornoApi {
 
     @JsonProperty("dados")
     List<Deputado> dados;
-
 }
